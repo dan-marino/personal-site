@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
     return Object.assign({}, obj1, obj2);
   });
   eleventyConfig.addPassthroughCopy("styles.css");
-  eleventyConfig.addPassthroughCopy("public");
+  eleventyConfig.addPassthroughCopy({ "public": "." });
 
   // Filters
   eleventyConfig.addFilter("date", (value, format = "yyyy") => {
