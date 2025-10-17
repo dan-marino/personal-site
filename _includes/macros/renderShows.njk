@@ -1,0 +1,71 @@
+{% macro renderShows(showList, title) %}
+<section class="shows-section">
+  <h2>{{ title }}</h2>
+
+  {# --- Upcoming Shows --- #}
+  <h3>Upcoming</h3>
+  {% if showList.upcoming.length %}
+    <table class="shows-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Venue</th>
+          <th>Tickets</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for show in showList.upcoming %}
+          <tr>
+            <td>{{ show.date }}</td>
+            <td>{{ show.title }}</td>
+            <td>{{ show.venue }}</td>
+            <td>
+              {% if show.tickets %}
+                <a href="{{ show.tickets }}" target="_blank" rel="noopener">Tickets</a>
+              {% else %}
+                —
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No upcoming shows.</p>
+  {% endif %}
+
+  {# --- Past Shows --- #}
+  <h3>Past</h3>
+  {% if showList.past.length %}
+    <table class="shows-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Venue</th>
+          <th>Tickets</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for show in showList.past %}
+          <tr>
+            <td>{{ show.date }}</td>
+            <td>{{ show.title }}</td>
+            <td>{{ show.venue }}</td>
+            <td>
+              {% if show.tickets %}
+                <a href="{{ show.tickets }}" target="_blank" rel="noopener">Tickets</a>
+              {% else %}
+                —
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No past shows yet.</p>
+  {% endif %}
+</section>
+{% endmacro %}

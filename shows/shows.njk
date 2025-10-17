@@ -1,0 +1,13 @@
+---
+layout: layout.njk
+title: Shows
+---
+
+{% from "macros/renderShows.njk" import renderShows %}
+
+<h1 class="text-3xl font-mono mb-8">Shows</h1>
+
+<main class="shows">
+  {{ renderShows(shows.improv, "Improv") }}
+  {{ renderShows(shows.music, "Music") }}
+</main>
