@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: Home
+title: Dan From Queens
 ---
 
 <h1>Dan Marino</h1>
