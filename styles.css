@@ -109,6 +109,55 @@ h1, h2, h3, p {
   margin-top: 0;
 }
 
+.shows-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  table-layout: auto; /* dynamic column widths */
+}
+
+.shows-table th,
+.shows-table td {
+  border: 1px solid var(--color-dark-gray);
+  padding: 0.5rem 1rem;
+  text-align: left;
+  font-family: monospace;
+  font-size: 14px;
+  word-wrap: break-word; /* allow text to wrap */
+  white-space: normal;   /* crucial: let height expand when text wraps */
+}
+
+.shows-table th {
+  background-color: var(--color-olive-green);
+  color: var(--color-white);
+}
+
+/* Optional: relative column width hints */
+.shows-table th:nth-child(1), td:nth-child(1) { width: 15%; }
+.shows-table th:nth-child(2), td:nth-child(2) { width: 40%; }
+.shows-table th:nth-child(3), td:nth-child(3) { width: 30%; }
+.shows-table th:nth-child(4), td:nth-child(4) { width: 15%; }
+
+/* Lighter off-white for rows */
+.shows-table tbody tr {
+  background-color: #e7e5e5; /* light off-white */
+}
+
+/* Optional: alternating row colors */
+.shows-table tbody tr:nth-child(even) {
+  background-color: #d4d4d4; /* slightly darker off-white for contrast */
+}
+
+.shows-table td a {
+  color: var(--color-olive-green);
+  text-decoration: none;
+}
+
+.shows-table td a:hover {
+  color: var(--color-golden-yellow);
+}
+
 @media (max-width: 768px) {
   body {
     flex-direction: column;

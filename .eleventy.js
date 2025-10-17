@@ -27,6 +27,17 @@ module.exports = function (eleventyConfig) {
     return Object.entries(grouped).sort((a, b) => b[0] - a[0]); // newest year first
   });
 
+  // Custom collection for shows
+  eleventyConfig.addCollection("shows", (collectionApi) => {
+    return collectionApi.getFilteredByGlob("shows/**/*.{json,md}")
+      .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
+  });
+
+  // Filter to parse a date string into a timestamp
+  eleventyConfig.addFilter("toTimestamp", function(dateStr) {
+    return new Date(dateStr).getTime();
+  });
+
   return {
     dir: {
       input: ".",
