@@ -4,7 +4,11 @@
   <link rel="icon" href="/favicon.png" type="image/png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title }}</title>
+  {% if title %}
+    <title>{{ title }} – {{ site.name }}</title>
+  {% else %}
+    <title>{{ site.name }}</title>
+  {% endif %}
   <link rel="stylesheet" href="/styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <style>
