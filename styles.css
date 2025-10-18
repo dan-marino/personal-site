@@ -187,7 +187,7 @@ h1, h2, h3, p {
 
   .shows-table td {
     border: 1px solid var(--color-dark-gray);
-    padding: 0.5rem 0.25rem;
+    padding: 0.5rem 0.2rem;
     text-align: center;
     font-family: monospace;
     font-size: 13px;
