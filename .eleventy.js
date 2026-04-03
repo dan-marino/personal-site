@@ -5,8 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("merge", (obj1, obj2) => {
     return Object.assign({}, obj1, obj2);
   });
-  eleventyConfig.addPassthroughCopy("styles.css");
-  eleventyConfig.addPassthroughCopy({ "public": "." });
+  eleventyConfig.addPassthroughCopy({ "src/public": "." });
 
   // Filters
   eleventyConfig.addFilter("date", (value, format = "yyyy") => {
@@ -29,7 +28,7 @@ module.exports = function (eleventyConfig) {
 
   // Custom collection for shows
   eleventyConfig.addCollection("shows", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("shows/**/*.{json,md}")
+    return collectionApi.getFilteredByGlob("src/shows/**/*.{json,md}")
       .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
   });
 
@@ -40,7 +39,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      input: ".",
+      input: "src",
       includes: "_includes",
       output: "_site"
     },
