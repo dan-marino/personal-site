@@ -1,55 +1,55 @@
 const showsRaw = {
     "improv": [
         {
-            "title": "Improv Level One Class Show",
+            "title": "Improv 1",
             "date": "2025-02-02",
             "venue": "Magnet Theater",
             "tickets": "https://magnettheater.com/show/tickets/59080"
         },
         {
-            "title": "Improv Level Two Class Show",
+            "title": "Improv 2",
             "date": "2025-03-30",
             "venue": "Magnet Theater",
             "tickets": "https://magnettheater.com/show/tickets/59265"
         },
         {
-            "title": "Improv Level Three Class Show",
+            "title": "Improv 3",
             "date": "2025-06-15",
             "venue": "Magnet Theater",
             "tickets": "https://magnettheater.com/show/tickets/59528/"
         },
         {
-            "title": "Musical Improv Level One",
+            "title": "Musical Improv 1",
             "date": "2025-08-10",
             "venue": "Magnet Theater",
             "tickets": "https://magnettheater.com/show/tickets/59669"
         },
         {
-            "title": "Advanced Improv Level 1 Class Show",
+            "title": "Advanced Improv 1",
             "date": "2025-10-19",
             "venue": "Magnet Theater",
             "tickets" : "https://magnettheater.com/show/tickets/59701/"
         },
         {
-            "title": "Advanced Improv Level 1 Class Show",
+            "title": "Advanced Improv 1",
             "date": "2025-10-26",
             "venue": "Magnet Theater",
             "tickets" : "https://magnettheater.com/show/tickets/59702/"
         },
         {
-            "title": "Advanced Improv Level 1 Class Show",
+            "title": "Advanced Improv 1",
             "date": "2025-11-02",
             "venue": "Magnet Theater",
             "tickets" : "https://magnettheater.com/show/tickets/59703/"
         },
         {
-            "title": "Advanced Improv Level 1 Class Show",
+            "title": "Advanced Improv 1",
             "date": "2025-11-09",
             "venue": "Magnet Theater",
             "tickets" : "https://magnettheater.com/show/tickets/59704/"
         },
         {
-            "title": "Musical Improv Level Two Class Show",
+            "title": "Musical Improv 2",
             "date": "2026-03-02",
             "venue": "Magnet Theater",
             "tickets" : "https://magnettheater.com/show/tickets/60212/"
