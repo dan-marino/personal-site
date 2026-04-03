@@ -47,6 +47,12 @@ const showsRaw = {
             "date": "2025-11-09",
             "venue": "Magnet Theater",
             "tickets" : "https://magnettheater.com/show/tickets/59704/"
+        },
+        {
+            "title": "Musical Level 2 Class Show",
+            "date": "2026-03-02",
+            "venue": "Magnet Theater",
+            "tickets" : "https://magnettheater.com/show/tickets/60212/"
         }
     ],
     "music": []
