@@ -85,6 +85,7 @@ main {
 main h1, main h2, main h3,
 main p, main ul, main ol {
   max-width: 900px;
+  line-height: 1.6;
 }
 
 main a {
@@ -102,6 +103,14 @@ main a:hover {
   height: auto;
   border-radius: 8px;
   margin: 2rem auto;
+}
+
+.post-image {
+  float: left;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 1rem 0 0;
+  width: 190px
 }
 
 /* Footer */
@@ -129,8 +138,12 @@ input, button, select, textarea {
 }
 
 /* Headings */
-h1, h2, h3, p {
-  margin-top: 0;
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: left;
 }
 
 /* Shows table */
@@ -182,5 +195,15 @@ h1, h2, h3, p {
 @media (max-width: 768px) {
   .shows-table td {
     padding: 0.5rem 0.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .post-image {
+    display: block;
+    float: none;
+    height: auto;
+    margin: auto;
+    width: 75%
   }
 }
