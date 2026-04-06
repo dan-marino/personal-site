@@ -2,6 +2,7 @@
 
 :root {
   --color-sky-blue: #90aeb8;
+  --color-frog-green:  #557040;;
   --color-soft-gray: #999b97;
   --color-dark-gray: #4b4b4b;
   --color-golden-yellow: #ab963f;
@@ -89,7 +90,7 @@ main p, main ul, main ol {
 }
 
 main a {
-  color: var(--color-olive-green);
+  color: var(--color-frog-green);
   text-decoration: none;
 }
 main a:hover {
