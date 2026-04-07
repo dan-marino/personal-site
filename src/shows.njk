@@ -8,5 +8,10 @@ permalink: /shows/
 
 <h1 class="text-3xl font-mono mb-8">Shows</h1>
 
-{{ renderShows(shows.improv, "Improv") }}
-{{ renderShows(shows.music, "Music") }}
+<h2>Upcoming</h2>
+{{ renderShows(shows.upcoming.music, "Music") }}
+{{ renderShows(shows.upcoming.improv, "Improv") }}
+
+<h2>Past</h2>
+{{ renderShows(shows.past.music, "Music", false) }}
+{{ renderShows(shows.past.improv, "Improv", false) }}

@@ -147,6 +147,24 @@ h1, h2, h3, h4, h5, h6 {
   clear: left;
 }
 
+/* Collapsible section toggle */
+.collapsible-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.collapsible-toggle:hover {
+  color: var(--color-frog-green);
+}
+
 /* Shows table */
 .shows-table {
   width: 100%;
