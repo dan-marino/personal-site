@@ -28,34 +28,41 @@ const showsRaw = {
             "title": "Advanced Improv 1",
             "date": "2025-10-19",
             "venue": "Magnet Theater",
-            "tickets" : "https://magnettheater.com/show/tickets/59701/"
+            "tickets": "https://magnettheater.com/show/tickets/59701/"
         },
         {
             "title": "Advanced Improv 1",
             "date": "2025-10-26",
             "venue": "Magnet Theater",
-            "tickets" : "https://magnettheater.com/show/tickets/59702/"
+            "tickets": "https://magnettheater.com/show/tickets/59702/"
         },
         {
             "title": "Advanced Improv 1",
             "date": "2025-11-02",
             "venue": "Magnet Theater",
-            "tickets" : "https://magnettheater.com/show/tickets/59703/"
+            "tickets": "https://magnettheater.com/show/tickets/59703/"
         },
         {
             "title": "Advanced Improv 1",
             "date": "2025-11-09",
             "venue": "Magnet Theater",
-            "tickets" : "https://magnettheater.com/show/tickets/59704/"
+            "tickets": "https://magnettheater.com/show/tickets/59704/"
         },
         {
             "title": "Musical Improv 2",
             "date": "2026-03-02",
             "venue": "Magnet Theater",
-            "tickets" : "https://magnettheater.com/show/tickets/60212/"
+            "tickets": "https://magnettheater.com/show/tickets/60212/"
         }
     ],
-    "music": []
+    "music": [
+        {
+            "title": "The Underground Open Mic",
+            "date": "2026-04-06",
+            "venue": "Bar Freda",
+            "tickets": "https://www.barfreda.com/event"
+        }
+    ]
 }
 
 const today = new Date().toISOString().split("T")[0]; // "YYYY-MM-DD"
