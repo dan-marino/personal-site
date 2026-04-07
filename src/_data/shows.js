@@ -74,7 +74,16 @@ function sortShows(shows) {
   return { upcoming, past };
 }
 
+const improv = sortShows(showsRaw.improv);
+const music = sortShows(showsRaw.music);
+
 module.exports = {
-  improv: sortShows(showsRaw.improv),
-  music: sortShows(showsRaw.music)
+  upcoming: {
+    music: music.upcoming,
+    improv: improv.upcoming
+  },
+  past: {
+    music: music.past,
+    improv: improv.past
+  }
 };

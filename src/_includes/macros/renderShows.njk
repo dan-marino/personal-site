@@ -1,71 +1,42 @@
-{% macro renderShows(showList, title) %}
-<section class="shows-section">
-  <h2>{{ title }}</h2>
-
-  {# --- Upcoming Shows --- #}
-  <h3>Upcoming</h3>
-  {% if showList.upcoming.length %}
-    <table class="shows-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Title</th>
-          <th>Venue</th>
-          <th>Tickets</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for show in showList.upcoming %}
+{% macro renderShows(showList, title, defaultOpen=true) %}
+<section class="shows-section" x-data="{ open: {{ 'true' if defaultOpen else 'false' }} }">
+  <h3>
+    <button class="collapsible-toggle" @click="open = !open" :aria-expanded="open">
+      {{ title }}
+      <span x-text="open ? '▲' : '▼'"></span>
+    </button>
+  </h3>
+  <div x-show="open" x-cloak>
+    {% if showList.length %}
+      <table class="shows-table">
+        <thead>
           <tr>
-            <td>{{ show.date }}</td>
-            <td>{{ show.title }}</td>
-            <td>{{ show.venue }}</td>
-            <td>
-              {% if show.tickets %}
-                <a href="{{ show.tickets }}" target="_blank" rel="noopener">Tickets</a>
-              {% else %}
-                —
-              {% endif %}
-            </td>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Venue</th>
+            <th>Tickets</th>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  {% else %}
-    <p>No upcoming shows.</p>
-  {% endif %}
-
-  {# --- Past Shows --- #}
-  <h3>Past</h3>
-  {% if showList.past.length %}
-    <table class="shows-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Title</th>
-          <th>Venue</th>
-          <th>Tickets</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for show in showList.past %}
-          <tr>
-            <td>{{ show.date }}</td>
-            <td>{{ show.title }}</td>
-            <td>{{ show.venue }}</td>
-            <td>
-              {% if show.tickets %}
-                <a href="{{ show.tickets }}" target="_blank" rel="noopener">Tickets</a>
-              {% else %}
-                —
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  {% else %}
-    <p>No past shows yet.</p>
-  {% endif %}
+        </thead>
+        <tbody>
+          {% for show in showList %}
+            <tr>
+              <td>{{ show.date }}</td>
+              <td>{{ show.title }}</td>
+              <td>{{ show.venue }}</td>
+              <td>
+                {% if show.tickets %}
+                  <a href="{{ show.tickets }}" target="_blank" rel="noopener">Tickets</a>
+                {% else %}
+                  —
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No shows.</p>
+    {% endif %}
+  </div>
 </section>
 {% endmacro %}
