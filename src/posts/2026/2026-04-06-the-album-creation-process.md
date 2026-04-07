@@ -1,11 +1,11 @@
 ---
-title: "The Album Writing Process"
+title: "The Album Creation Process"
 date: 2026-04-06
 tags: post
 layout: layout.njk
 ---
 
-# The Album Writing Process
+# The Album Creation Process
 
 <p>It's impossible to say how long I've been making my latest record. The handful I've made under the moniker "Randy's Got a Playdough Face" never had a clear starting mark. My last album, Ours, came out in 2020 and is the work I'm most proud of in life.</p>
 
@@ -100,4 +100,6 @@ layout: layout.njk
 
 <p>I had to practice all ten songs for the next three months. Like really practice them. Use metronome at painfully slow speeds when I hit a sticky point, internalize lyrics, write out the vocal melodies, etc. Then, when I felt like I could do a full playthrough, I would quickly record phone voice memos and listen to where the performances felt flat. When most of the kinks were worked out, I would try them out at an open mic.</p>
 
-<p>This part's important for a few reasons. I can meet musicians in the wild (skip the need for a portfolio – just start connecting with people on the journey) and I get to battle test these songs under the hot lights with a little audience pressure. If I can do that, I can play with strangers, I can record more easily – lots of wins all around. By the end of three months, I would have the album in a super raw state, one that I would feel comfortable calling "done".</p>
+<p>This part's important for a few reasons. I can meet musicians in the wild (skip the need for a portfolio – just start connecting with people on the journey) and I get to battle test these songs under the hot lights with a little audience pressure. If I can do that, I can play with strangers, I can record more easily – lots of wins all around.</p>
+
+<p>I'm at the start of these three months. By the end, I will have given at least 10 live performances and have the album in a super raw state, one that I would feel comfortable calling "done". I can practice and refine forever, but I'm willing to greet the world in my current state. Here's to imperfection, not having complete information, and the courage to act.</p>
