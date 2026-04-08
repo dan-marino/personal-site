@@ -25,7 +25,13 @@
     </ul>
   </nav>
   <main>
-    {{ content | safe }}
+    {% if tags and "post" in tags %}
+      <h1>{{ content | postTitle }}</h1>
+      <p class="post-meta">{{ content | readingTime }}</p>
+      {{ content | removeH1 | safe }}
+    {% else %}
+      {{ content | safe }}
+    {% endif %}
   </main>
   <footer>
     <p>© 2025 Dan Marino</p>
