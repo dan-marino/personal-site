@@ -10,8 +10,7 @@
   --color-olive-green: #485e37;
   --color-white: #eeeeee;
   --color-black: #000000;
-  --color-muted: var(--color-muted);
-  --font-size-small: 13px;
+  --color-muted: #5b5d5b;
 }
 
 /* Base resets */
@@ -169,19 +168,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .post-list-date {
   color: var(--color-dark-gray);
-  font-size: var(--font-size-small);
   white-space: nowrap;
   min-width: 3.5rem;
 }
 .post-list-meta {
-  font-size: var(--font-size-small);
   color: var(--color-muted);
   font-style: italic;
   white-space: nowrap;
 }
 .post-list-excerpt {
   margin: 0.2rem 0 0 0;
-  font-size: var(--font-size-small);
   color: var(--color-muted);
   padding-left: calc(3.5rem + 0.75rem);
 }
