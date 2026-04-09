@@ -28,6 +28,40 @@ module.exports = function (eleventyConfig) {
       .map(([year, posts]) => [year, posts.sort((a, b) => b.date - a.date)]); // newest post first within year
   });
 
+  // All unique tags from posts (excluding "post" itself)
+  eleventyConfig.addCollection("tagList", function(collectionApi) {
+    const tags = new Set();
+    collectionApi.getFilteredByTag("post").forEach(post => {
+      const t = post.data.tags;
+      const arr = Array.isArray(t) ? t : (t ? [t] : []);
+      arr.forEach(tag => { if (tag !== "post") tags.add(tag); });
+    });
+    return [...tags].sort();
+  });
+
+  // Filter: strips the "post" sentinel tag, returns the rest
+  eleventyConfig.addFilter("postTags", function(tags) {
+    if (!tags) return [];
+    const arr = Array.isArray(tags) ? tags : [tags];
+    return arr.filter(t => t !== "post");
+  });
+
+  // Filter: returns all unique non-"post" tags across an array of posts
+  eleventyConfig.addFilter("yearTags", function(posts) {
+    const tags = new Set();
+    posts.forEach(post => {
+      const t = post.data.tags;
+      const arr = Array.isArray(t) ? t : (t ? [t] : []);
+      arr.forEach(tag => { if (tag !== "post") tags.add(tag); });
+    });
+    return [...tags];
+  });
+
+  // Filter: serialize a value to a JSON string for use in Alpine.js expressions
+  eleventyConfig.addFilter("json", function(value) {
+    return JSON.stringify(value);
+  });
+
   // Custom collection for shows
   eleventyConfig.addCollection("shows", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/shows/**/*.{json,md}")

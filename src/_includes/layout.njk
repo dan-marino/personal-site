@@ -28,6 +28,14 @@
     {% if tags and "post" in tags %}
       <h1>{{ content | postTitle }}</h1>
       <p class="post-meta">{{ content | readingTime }}</p>
+      {% set postTagList = tags | postTags %}
+      {% if postTagList.length %}
+        <div class="post-tags">
+          {% for t in postTagList %}
+            <a href="/tags/{{ t }}/" class="tag">#{{ t }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
       {{ content | removeH1 | safe }}
     {% else %}
       {{ content | safe }}

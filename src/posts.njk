@@ -8,25 +8,51 @@ pagination:
 permalink: "/posts/index.html"
 ---
 
-<h1 class="text-3xl font-mono mb-8">Posts</h1>
+<h1>Posts</h1>
 
-<div class="space-y-12">
-  {% for year, posts in collections.postsByYear %}
-    <div class="flex">
-      <h2 class="w-24 shrink-0 text-right pr-4 text-gray-400 font-mono text-sm">{{ year }}</h2>
-      <div class="flex-1 space-y-2">
-        {% for post in posts %}
-          <div class="post-list-item">
-            <div class="post-list-header">
-              <span class="post-list-date">{{ post.date | date("MMM d") }}</span>
-              <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
-              <span class="post-list-meta">{{ post.templateContent | readingTime }}</span>
+<div x-data="{ activeTag: null }">
+
+  <div class="tag-filter">
+    <button
+      class="tag tag-btn"
+      :class="{ 'tag-active': activeTag === null }"
+      @click="activeTag = null">all</button>
+    {% for tag in collections.tagList %}
+      <button
+        class="tag tag-btn"
+        :class="{ 'tag-active': activeTag === '{{ tag }}' }"
+        @click="activeTag = activeTag === '{{ tag }}' ? null : '{{ tag }}'">#{{ tag }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="space-y-12">
+    {% for year, yearPosts in collections.postsByYear %}
+      {% set yearTagsArr = yearPosts | yearTags %}
+      <div class="flex" x-show="activeTag === null || {{ yearTagsArr | json }}.includes(activeTag)">
+        <h2 class="w-24 shrink-0 text-right pr-4 text-gray-400 font-mono text-sm">{{ year }}</h2>
+        <div class="flex-1 space-y-2">
+          {% for post in yearPosts %}
+            {% set postTagsArr = post.data.tags | postTags %}
+            <div class="post-list-item" x-show="activeTag === null || {{ postTagsArr | json }}.includes(activeTag)">
+              <div class="post-list-header">
+                <span class="post-list-date">{{ post.date | date("MMM d") }}</span>
+                <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
+                <span class="post-list-meta">{{ post.templateContent | readingTime }}</span>
+              </div>
+              <p class="post-list-excerpt">{{ post.templateContent | excerpt }}</p>
+              {% set postTagList = post.data.tags | postTags %}
+              {% if postTagList.length %}
+                <div class="post-list-tags">
+                  {% for t in postTagList %}
+                    <a href="/tags/{{ t }}/" class="tag">#{{ t }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
             </div>
-            <p class="post-list-excerpt">{{ post.templateContent | excerpt }}</p>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
 
+</div>

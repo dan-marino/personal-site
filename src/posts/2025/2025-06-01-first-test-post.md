@@ -1,7 +1,9 @@
 ---
 title: "First Test Post"
 date: 2025-06-01
-tags: post
+tags:
+  - post
+  - meta
 layout: layout.njk
 ---
 

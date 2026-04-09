@@ -1,0 +1,27 @@
+---
+layout: layout.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: "/tags/{{ tag }}/"
+eleventyComputed:
+  title: "#{{ tag }}"
+---
+
+<h1>#{{ tag }}</h1>
+
+<p><a href="/posts/">← all posts</a></p>
+
+<div>
+  {% for post in collections[tag] | reverse %}
+    <div class="post-list-item">
+      <div class="post-list-header">
+        <span class="post-list-date">{{ post.date | date("MMM d") }}</span>
+        <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
+        <span class="post-list-meta">{{ post.templateContent | readingTime }}</span>
+      </div>
+      <p class="post-list-excerpt">{{ post.templateContent | excerpt }}</p>
+    </div>
+  {% endfor %}
+</div>
