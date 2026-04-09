@@ -23,7 +23,9 @@ module.exports = function (eleventyConfig) {
       grouped[year].push(post);
     });
 
-    return Object.entries(grouped).sort((a, b) => b[0] - a[0]); // newest year first
+    return Object.entries(grouped)
+      .sort((a, b) => b[0] - a[0]) // newest year first
+      .map(([year, posts]) => [year, posts.sort((a, b) => b.date - a.date)]); // newest post first within year
   });
 
   // Custom collection for shows
