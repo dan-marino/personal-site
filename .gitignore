@@ -15,3 +15,6 @@ Thumbs.db
 # Environment/config
 .env
 *.local
+
+# Keep drafts local
+./posts/drafts/*
