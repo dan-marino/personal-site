@@ -184,6 +184,52 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-muted);
   padding-left: calc(3.5rem + 0.75rem);
 }
+.post-list-tags {
+  margin: 0.3rem 0 0;
+  padding-left: calc(3.5rem + 0.75rem);
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/* Tag badges */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--color-olive-green);
+  border: 1px solid var(--color-olive-green);
+  padding: 0.1rem 0.35rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.tag:hover {
+  background-color: var(--color-olive-green);
+  color: var(--color-white);
+}
+
+/* Tags on individual post pages */
+.post-tags {
+  margin: 0.25rem 0 1rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/* Tag filter bar on posts page */
+.tag-filter {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.tag-btn {
+  background: none;
+  cursor: pointer;
+}
+.tag-active {
+  background-color: var(--color-olive-green);
+  color: var(--color-white);
+}
 
 /* Collapsible section toggle */
 .collapsible-toggle {

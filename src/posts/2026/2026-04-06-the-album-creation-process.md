@@ -1,7 +1,9 @@
 ---
 title: "The Album Creation Process"
 date: 2026-04-06
-tags: post
+tags:
+  - post
+  - music
 layout: layout.njk
 ---
 

@@ -1,7 +1,9 @@
 ---
 title: "Looking for Bandmates"
 date: 2026-04-09
-tags: post
+tags:
+  - post
+  - music
 layout: layout.njk
 ---
 
