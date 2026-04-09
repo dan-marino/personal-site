@@ -19,7 +19,7 @@ permalink: "/posts/index.html"
           <div class="post-list-item">
             <div class="post-list-header">
               <span class="post-list-date">{{ post.date | date("MMM d") }}</span>
-              <a href="{{ post.url }}">{{ post.data.title }}</a>
+              <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
               <span class="post-list-meta">{{ post.templateContent | readingTime }}</span>
             </div>
             <p class="post-list-excerpt">{{ post.templateContent | excerpt }}</p>
