@@ -61,6 +61,12 @@ const showsRaw = {
             "date": "2026-04-06",
             "venue": "Bar Freda",
             "tickets": "https://www.barfreda.com/event"
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-04-14",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
         }
     ]
 }
