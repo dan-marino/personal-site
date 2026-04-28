@@ -17,4 +17,4 @@ Thumbs.db
 *.local
 
 # Keep drafts local
-./posts/drafts/*
+./src/posts/drafts/*
