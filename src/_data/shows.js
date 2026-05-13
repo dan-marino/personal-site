@@ -79,6 +79,18 @@ const showsRaw = {
             "date": "2026-04-28",
             "venue": "Roots Cafe",
             "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-05-05",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-05-12",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
         }
     ]
 }
