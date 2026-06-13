@@ -91,7 +91,25 @@ const showsRaw = {
             "date": "2026-05-12",
             "venue": "Roots Cafe",
             "tickets": "https://www.instagram.com/samandfriendsopenmic/"
-        }
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-05-19",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-06-02",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-06-09",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
     ]
 }
 
