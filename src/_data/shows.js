@@ -110,6 +110,48 @@ const showsRaw = {
             "venue": "Roots Cafe",
             "tickets": "https://www.instagram.com/samandfriendsopenmic/"
         },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-06-23",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-06-30",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-07-07",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-08-04",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
+        {
+            "title": "Sam and Friends Open Mic",
+            "date": "2026-08-11",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.instagram.com/samandfriendsopenmic/"
+        },
+        {
+            "title": "Johnny Karate Variety Show",
+            "date": "2026-08-16",
+            "venue": "Johnny Karate",
+            "tickets": "https://www.instagram.com/p/DbwoV_uthdd/"
+        },
+        {
+            "title": "Very Serious Business Variety Show",
+            "date": "2026-08-26",
+            "venue": "Roots Cafe",
+            "tickets": "https://www.eventbrite.com/e/very-serious-business-a-very-fun-variety-show-tickets-1618749426109"
+        }
     ]
 }
 
